@@ -1,20 +1,22 @@
-int bottle_counter = 0;
 
-void sendCounter(int _counter)
+const uint8_t bottle_counter = 1;
+
+//
+void sendCounterValue(int value)
 {
   Serial.print("count=");
-  Serial.println(_counter);
+  Serial.println(value);
 }
 
 void setup()
 {
+  // Initialize Serial Connection
   Serial.begin(9600);
-  sendCounter(bottle_counter);
 }
+
 void loop()
 {
-  sendCounter(bottle_counter);
-  delay(3000);
-
-  bottle_counter++;
+  // send data every 2seconds
+  sendCounterValue(bottle_counter);
+  delay(2000);
 }
