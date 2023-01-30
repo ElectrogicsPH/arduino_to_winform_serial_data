@@ -33,6 +33,7 @@
             this.connectButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // serialPortsComboBox
             // 
             this.serialPortsComboBox.FormattingEnabled = true;
-            this.serialPortsComboBox.Location = new System.Drawing.Point(25, 77);
+            this.serialPortsComboBox.Location = new System.Drawing.Point(25, 99);
             this.serialPortsComboBox.Name = "serialPortsComboBox";
             this.serialPortsComboBox.Size = new System.Drawing.Size(169, 23);
             this.serialPortsComboBox.TabIndex = 1;
@@ -58,7 +59,7 @@
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(25, 106);
+            this.connectButton.Location = new System.Drawing.Point(25, 128);
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(88, 23);
             this.connectButton.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(119, 106);
+            this.refreshButton.Location = new System.Drawing.Point(119, 128);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(75, 23);
             this.refreshButton.TabIndex = 3;
@@ -76,16 +77,27 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ResetButton);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.refreshButton);
             this.groupBox1.Controls.Add(this.serialPortsComboBox);
             this.groupBox1.Controls.Add(this.connectButton);
             this.groupBox1.Location = new System.Drawing.Point(37, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(220, 159);
+            this.groupBox1.Size = new System.Drawing.Size(220, 181);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bottle Count";
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(67, 71);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(75, 23);
+            this.ResetButton.TabIndex = 4;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // Form1
             // 
@@ -108,5 +120,6 @@
         private Button connectButton;
         private Button refreshButton;
         private GroupBox groupBox1;
+        private Button ResetButton;
     }
 }
